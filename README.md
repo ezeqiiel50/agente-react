@@ -85,4 +85,4 @@ Ver [`traces/ejemplo_traza.json`](traces/ejemplo_traza.json). Resumen:
 
 Con el mismo `thread_id`, el historial se guarda en `checkpoints.sqlite` y se recupera incluso entre ejecuciones del programa.
 
-Prueba entre ejecuciones: en un segundo proceso, con el mismo `thread_id`, la pregunta *"¿Y cuál fue el pedido más barato?"* se respondió sin mencionar al cliente. El agente recordó que era el cliente 102 y llamó directamente a `buscar_pedidos(102)` (ver [`traces/persistencia_traza.json`](traces/persistencia_traza.json)).
+Prueba entre ejecuciones: en un segundo proceso, con el mismo `thread_id`, la pregunta *"¿Y cuál fue el pedido más barato?"* se respondió sin mencionar al cliente. El agente recordó que era el cliente 102 y llamó directamente a `buscar_pedidos(102)`.
