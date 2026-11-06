@@ -1,0 +1,116 @@
+[
+  {
+    "usuario": "¿Cuántos pedidos tuvo Juan Perez y cuál fue el total?",
+    "pasos": [
+      {
+        "tipo": "human",
+        "contenido": "¿Cuántos pedidos tuvo Juan Perez y cuál fue el total?",
+        "tool_calls": null,
+        "tool_name": null
+      },
+      {
+        "tipo": "ai",
+        "contenido": "",
+        "tool_calls": [
+          {
+            "name": "buscar_cliente_id",
+            "args": {
+              "nombre": "Juan Perez"
+            },
+            "id": "call_6190768753245701935",
+            "type": "tool_call"
+          }
+        ],
+        "tool_name": null
+      },
+      {
+        "tipo": "tool",
+        "contenido": "{\"cliente_id\": 102}",
+        "tool_calls": null,
+        "tool_name": "buscar_cliente_id"
+      },
+      {
+        "tipo": "ai",
+        "contenido": "",
+        "tool_calls": [
+          {
+            "name": "buscar_pedidos",
+            "args": {
+              "cliente_id": 102
+            },
+            "id": "call_3072015714994025496",
+            "type": "tool_call"
+          }
+        ],
+        "tool_name": null
+      },
+      {
+        "tipo": "tool",
+        "contenido": "{\"pedidos\": 3, \"total\": 14500, \"detalle\": [{\"id\": 9001, \"fecha\": \"2026-08-10\", \"monto\": 4500}, {\"id\": 9002, \"fecha\": \"2026-09-03\", \"monto\": 5000}, {\"id\": 9003, \"fecha\": \"2026-10-21\", \"monto\": 5000}]}",
+        "tool_calls": null,
+        "tool_name": "buscar_pedidos"
+      },
+      {
+        "tipo": "ai",
+        "contenido": "Juan Perez ha realizado un total de 3 pedidos, sumando un monto acumulado de 14.500.",
+        "tool_calls": null,
+        "tool_name": null
+      }
+    ]
+  },
+  {
+    "usuario": "¿Y el último?",
+    "pasos": [
+      {
+        "tipo": "human",
+        "contenido": "¿Y el último?",
+        "tool_calls": null,
+        "tool_name": null
+      },
+      {
+        "tipo": "ai",
+        "contenido": "El último pedido de Juan Perez fue el número 9003, realizado el 21 de octubre de 2026, por un monto de 5.000.",
+        "tool_calls": null,
+        "tool_name": null
+      }
+    ]
+  },
+  {
+    "usuario": "¿Y los pedidos de Pedro Lopez?",
+    "pasos": [
+      {
+        "tipo": "human",
+        "contenido": "¿Y los pedidos de Pedro Lopez?",
+        "tool_calls": null,
+        "tool_name": null
+      },
+      {
+        "tipo": "ai",
+        "contenido": "",
+        "tool_calls": [
+          {
+            "name": "buscar_cliente_id",
+            "args": {
+              "nombre": "Pedro Lopez"
+            },
+            "id": "call_5780378048020739585",
+            "type": "tool_call"
+          }
+        ],
+        "tool_name": null
+      },
+      {
+        "tipo": "tool",
+        "contenido": "{\"error\": \"No existe un cliente llamado 'Pedro Lopez'.\"}",
+        "tool_calls": null,
+        "tool_name": "buscar_cliente_id"
+      },
+      {
+        "tipo": "ai",
+        "contenido": "No he podido encontrar a ningún cliente registrado bajo el nombre \"Pedro Lopez\". ¿Podrías verificar si el nombre es correcto o si tiene algún otro apellido?",
+        "tool_calls": null,
+        "tool_name": null
+      }
+    ]
+  }
+]
